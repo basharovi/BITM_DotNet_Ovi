@@ -35,9 +35,9 @@ namespace Personal_InfoApp
                 mothersNameTextBox.Text = "";
                 addressTextBox.Text = "";
             }
-            catch (Exception abc)
+            catch (Exception x)
             {
-                MessageBox.Show(abc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(x.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
