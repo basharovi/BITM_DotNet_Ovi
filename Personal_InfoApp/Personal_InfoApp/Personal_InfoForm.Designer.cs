@@ -123,6 +123,7 @@
             this.SaveButton.TabIndex = 2;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // ShowInfoButton
             // 
@@ -174,37 +175,37 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(163, 111);
+            this.firstNameTextBox.Location = new System.Drawing.Point(182, 111);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(238, 20);
+            this.firstNameTextBox.Size = new System.Drawing.Size(188, 20);
             this.firstNameTextBox.TabIndex = 3;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(163, 160);
+            this.lastNameTextBox.Location = new System.Drawing.Point(182, 162);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(238, 20);
+            this.lastNameTextBox.Size = new System.Drawing.Size(188, 20);
             this.lastNameTextBox.TabIndex = 3;
             // 
             // fathersNameTextBox
             // 
-            this.fathersNameTextBox.Location = new System.Drawing.Point(163, 214);
+            this.fathersNameTextBox.Location = new System.Drawing.Point(182, 214);
             this.fathersNameTextBox.Name = "fathersNameTextBox";
-            this.fathersNameTextBox.Size = new System.Drawing.Size(238, 20);
+            this.fathersNameTextBox.Size = new System.Drawing.Size(188, 20);
             this.fathersNameTextBox.TabIndex = 3;
             // 
             // mothersNameTextBox
             // 
-            this.mothersNameTextBox.Location = new System.Drawing.Point(163, 268);
+            this.mothersNameTextBox.Location = new System.Drawing.Point(182, 270);
             this.mothersNameTextBox.Name = "mothersNameTextBox";
-            this.mothersNameTextBox.Size = new System.Drawing.Size(238, 20);
+            this.mothersNameTextBox.Size = new System.Drawing.Size(188, 20);
             this.mothersNameTextBox.TabIndex = 3;
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(163, 321);
+            this.addressTextBox.Location = new System.Drawing.Point(182, 322);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(238, 20);
+            this.addressTextBox.Size = new System.Drawing.Size(188, 20);
             this.addressTextBox.TabIndex = 3;
             // 
             // Personal_InfoForm
@@ -212,7 +213,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(449, 510);
+            this.ClientSize = new System.Drawing.Size(460, 510);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.mothersNameTextBox);
             this.Controls.Add(this.fathersNameTextBox);
