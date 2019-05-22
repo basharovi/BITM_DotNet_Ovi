@@ -1,0 +1,10 @@
+C:\Users\ovics\source\repos\BookShop\BookShop\bin\Debug\BookShop.exe.config
+C:\Users\ovics\source\repos\BookShop\BookShop\bin\Debug\BookShop.exe
+C:\Users\ovics\source\repos\BookShop\BookShop\bin\Debug\BookShop.pdb
+C:\Users\ovics\source\repos\BookShop\BookShop\obj\Debug\BookShop.csprojAssemblyReference.cache
+C:\Users\ovics\source\repos\BookShop\BookShop\obj\Debug\BookShop.HomeForm.resources
+C:\Users\ovics\source\repos\BookShop\BookShop\obj\Debug\BookShop.Properties.Resources.resources
+C:\Users\ovics\source\repos\BookShop\BookShop\obj\Debug\BookShop.csproj.GenerateResource.cache
+C:\Users\ovics\source\repos\BookShop\BookShop\obj\Debug\BookShop.csproj.CoreCompileInputs.cache
+C:\Users\ovics\source\repos\BookShop\BookShop\obj\Debug\BookShop.exe
+C:\Users\ovics\source\repos\BookShop\BookShop\obj\Debug\BookShop.pdb
