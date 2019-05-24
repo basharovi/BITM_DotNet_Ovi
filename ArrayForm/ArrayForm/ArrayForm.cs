@@ -128,6 +128,8 @@ namespace ArrayForm
             }
             showRichTextBox.Text = Convert.ToString(count);
         }
+
+       
     }
     
 }

@@ -17,21 +17,61 @@ namespace BookShop
             InitializeComponent();
         }
 
-        
-        private void SaveButtonClick(object sender, EventArgs e)
-        {
-            DataTable bookshop = new DataTable();
-            bookshop.Columns.Add("\n\t\t\t     Customer Information\n\t\t___________________________________\n\n\n");
-            bookshop.Columns.Add(" Name                   :\t" + customerNameTextBox.Text+ "\n\n");
-            bookshop.Columns.Add(" Phone No.          :\t" + phoneNumberTextBox.Text+ "\n\n");
-            bookshop.Columns.Add(" Address               :\t" + addressTextBox.Text+ "\n\n");
-            bookshop.Columns.Add(" Order                   :\t" + orderComboBox.Text+ "\n\n");
-            bookshop.Columns.Add(" Quantity             :\t" + quantitiyTextBox.Text+ "\n\n");
+        int index = 1;
+        int price;
 
-            foreach (var dataTable in bookshop.Columns)
+
+
+
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            string[] customerName = new string[100];
+            string[] phoneNo = new string[100];
+            string[] address = new string[100];
+            string[] order = new string[100];
+            string[] quantity = new string[100];
+            string[] bill = new string[100];
+
+
+
+            customerName[index] = customerNameTextBox.Text;
+            phoneNo[index] = phoneNumberTextBox.Text;
+            address[index] = addressTextBox.Text;
+            order[index] = orderComboBox.Text;
+            quantity[index] = quantitiyTextBox.Text;
+
+
+            if (order[index].Equals("Math"))
             {
-                richTextBox.SelectedText = dataTable.ToString();
+                price = 120;
+
             }
+            else if (order[index].Equals("English"))
+            {
+                price = 100;
+
+            }
+            else if (order[index].Equals("Bangla"))
+            {
+                price = 90;
+
+            }
+            else if (order[index].Equals("Art"))
+            {
+                price = 80;
+
+            }
+            bill[index] = (Convert.ToInt32(quantity[index]) * price).ToString();
+
+            richTextBox.SelectedText = ("\n\t     Customer No. [" + index + "] Information \n\t_______________________________\n\n");
+            richTextBox.SelectedText = (" Name              :   " + customerName[index] + "\n");
+            richTextBox.SelectedText = (" Phone No.       :   " + phoneNo[index] + "\n");
+            richTextBox.SelectedText = (" Address           :   " + address[index] + "\n");
+            richTextBox.SelectedText = (" Order              :   " + order[index] + "\n");
+            richTextBox.SelectedText = (" Quantity         :   " + quantity[index] + "\n");
+            richTextBox.SelectedText = (" Total Bill          :   " + bill[index] + " Tk.\n");
+            index++;
 
             customerNameTextBox.Clear();
             phoneNumberTextBox.Clear();
@@ -39,7 +79,5 @@ namespace BookShop
             orderComboBox.ResetText();
             quantitiyTextBox.Clear();
         }
-
-       
     }
 }
