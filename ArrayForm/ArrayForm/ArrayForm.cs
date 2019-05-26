@@ -22,25 +22,32 @@ namespace ArrayForm
             InitializeComponent();
         }
 
+        private string Show()
+        {
+            string message = "";
+
+            for (index = 0; index < number.Length; index++)
+            {
+                if (number[index] != 0)
+                    message = message + "Element at index [" + index + "] " + number[index].ToString() + "\n";
+
+            }
+            return  message;
+
+        }
+
         private void ShowButton_Click(object sender, EventArgs e)
         {
             const int size = 10;
             int [] number = new int[size];
-            string message = " ";
-            number[0] = 11;
-            number[2] = 15;
-            number[4] = 19;
-            number[6] = 30;
+            //string message = " ";
+            
+
 
             
-            int index;
+           // int index;
 
-            for ( index = 0; index < number.Length; index++)
-            {
-                message = message + "Element at index [" + index + "] " + number[index].ToString() + "\n";
-                showRichTextBox.Text = message;
-            }
-            
+            showRichTextBox.Text = Show();
 
 
         }
@@ -68,15 +75,26 @@ namespace ArrayForm
 
         private void ReverseButton_Click(object sender, EventArgs e)
         {
+            string message = "";
+            message = "Input Value\n\n";
+            message = message + Show();
+
+            message = message + "Reverse Value\n\n";
+
+            for (int index = size - 1; index >= 0; index--)
+            {
+                if (number[index] != 0)
+                    message = message + "Element at index [" + index + "] " + number[index].ToString() + "\n";
+
+            }
+            showRichTextBox.Text = message;
+
 
         }
 
         private void SumButton_Click(object sender, EventArgs e)
         {
-            //string message = " ";
-            //[index] = Convert.ToInt32(addTextBox.Text);
-            //index++;
-           // int sum;
+            
 
             for (int index = 0; index < number.Length; index++)
             {
@@ -85,7 +103,7 @@ namespace ArrayForm
 
 
             }
-            showRichTextBox.Text = Convert.ToString(sum);
+            showRichTextBox.Text = "Sum = " + Convert.ToString(sum);
         }
 
         private void CopyButton_Click(object sender, EventArgs e)
@@ -101,12 +119,8 @@ namespace ArrayForm
 
             string message = " ";
 
-            for (int index = 0; index < number.Length; index++)
-            {
-                if (number[index] != 0)
-                    message = message + "Element at index [" + index + "] " + number[index].ToString() + "\n";
+            message = message + Show();
 
-            }
             showRichTextBox.Text = message;
         }
 
