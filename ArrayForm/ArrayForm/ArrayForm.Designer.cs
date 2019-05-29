@@ -37,6 +37,11 @@
             this.CopyButton = new System.Windows.Forms.Button();
             this.duplicateButton = new System.Windows.Forms.Button();
             this.uniqueButton = new System.Windows.Forms.Button();
+            this.MinMaxButton = new System.Windows.Forms.Button();
+            this.SortingButton = new System.Windows.Forms.Button();
+            this.OddEvenButton = new System.Windows.Forms.Button();
+            this.newValueInsertTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ShowButton
@@ -124,17 +129,70 @@
             this.uniqueButton.Text = "Unique";
             this.uniqueButton.UseVisualStyleBackColor = true;
             // 
+            // MinMaxButton
+            // 
+            this.MinMaxButton.Location = new System.Drawing.Point(354, 185);
+            this.MinMaxButton.Name = "MinMaxButton";
+            this.MinMaxButton.Size = new System.Drawing.Size(86, 40);
+            this.MinMaxButton.TabIndex = 8;
+            this.MinMaxButton.Text = "MiN and MaX";
+            this.MinMaxButton.UseVisualStyleBackColor = true;
+            this.MinMaxButton.Click += new System.EventHandler(this.duplicateButton_Click);
+            // 
+            // SortingButton
+            // 
+            this.SortingButton.Location = new System.Drawing.Point(354, 238);
+            this.SortingButton.Name = "SortingButton";
+            this.SortingButton.Size = new System.Drawing.Size(86, 40);
+            this.SortingButton.TabIndex = 8;
+            this.SortingButton.Text = "Ascending and Decending";
+            this.SortingButton.UseVisualStyleBackColor = true;
+            this.SortingButton.Click += new System.EventHandler(this.duplicateButton_Click);
+            // 
+            // OddEvenButton
+            // 
+            this.OddEvenButton.Location = new System.Drawing.Point(354, 284);
+            this.OddEvenButton.Name = "OddEvenButton";
+            this.OddEvenButton.Size = new System.Drawing.Size(86, 40);
+            this.OddEvenButton.TabIndex = 8;
+            this.OddEvenButton.Text = "ODD  EVEN";
+            this.OddEvenButton.UseVisualStyleBackColor = true;
+            this.OddEvenButton.Click += new System.EventHandler(this.duplicateButton_Click);
+            // 
+            // newValueInsertTextBox
+            // 
+            this.newValueInsertTextBox.BackColor = System.Drawing.Color.White;
+            this.newValueInsertTextBox.Location = new System.Drawing.Point(115, 356);
+            this.newValueInsertTextBox.Name = "newValueInsertTextBox";
+            this.newValueInsertTextBox.Size = new System.Drawing.Size(131, 20);
+            this.newValueInsertTextBox.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 359);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Insert New Value";
+            // 
             // ArrayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(491, 401);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.uniqueButton);
+            this.Controls.Add(this.OddEvenButton);
+            this.Controls.Add(this.SortingButton);
+            this.Controls.Add(this.MinMaxButton);
             this.Controls.Add(this.duplicateButton);
             this.Controls.Add(this.CopyButton);
             this.Controls.Add(this.SumButton);
             this.Controls.Add(this.ReverseButton);
             this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.newValueInsertTextBox);
             this.Controls.Add(this.addTextBox);
             this.Controls.Add(this.showRichTextBox);
             this.Controls.Add(this.ShowButton);
@@ -156,6 +214,11 @@
         private System.Windows.Forms.Button CopyButton;
         private System.Windows.Forms.Button duplicateButton;
         private System.Windows.Forms.Button uniqueButton;
+        private System.Windows.Forms.Button MinMaxButton;
+        private System.Windows.Forms.Button SortingButton;
+        private System.Windows.Forms.Button OddEvenButton;
+        private System.Windows.Forms.TextBox newValueInsertTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 

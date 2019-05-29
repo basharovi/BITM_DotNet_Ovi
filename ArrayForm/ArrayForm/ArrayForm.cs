@@ -16,6 +16,7 @@ namespace ArrayForm
         int[] number = new int[size];
         int index;
         int sum=0;
+        int i = 0;
 
         public ArrayForm()
         {
@@ -29,7 +30,7 @@ namespace ArrayForm
             for (index = 0; index < number.Length; index++)
             {
                 if (number[index] != 0)
-                    message = message + "Element at index [" + index + "] " + number[index].ToString() + "\n";
+                    message = message + "Element at index  [" + index + "]  =  " + number[index].ToString() + "\n";
 
             }
             return  message;
@@ -38,39 +39,26 @@ namespace ArrayForm
 
         private void ShowButton_Click(object sender, EventArgs e)
         {
-            const int size = 10;
-            int [] number = new int[size];
-            //string message = " ";
             
-
-
-            
-           // int index;
-
             showRichTextBox.Text = Show();
-
 
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            
 
+            
             string message = " ";
-            number [index] = Convert.ToInt32(addTextBox.Text);
-            index++;
-          
-
-
-            
-
-            for (int index = 0; index < number.Length; index++)
+            if (String.IsNullOrEmpty(addTextBox.Text))
             {
-                if (number[index] != 0)
-                message = message + "Element at index [" + index + "] " + number[index].ToString() + "\n";
-               
+                MessageBox.Show("Add Field cant be Empty");
+                return;
             }
-            showRichTextBox.Text = message;
+            number [i] = Convert.ToInt32(addTextBox.Text);
+            
+          
+            showRichTextBox.Text = message +  Show();
+            i++;
         }
 
         private void ReverseButton_Click(object sender, EventArgs e)
@@ -103,42 +91,47 @@ namespace ArrayForm
 
 
             }
-            showRichTextBox.Text = "Sum = " + Convert.ToString(sum);
+            showRichTextBox.Text = Show() + "Sum = " + Convert.ToString(sum);
         }
 
         private void CopyButton_Click(object sender, EventArgs e)
         {
-            int[] array2 = new int[10];
+            int[] copyArray = new int[size];
 
-            for (int index = 0; index < array2.Length; index++)
+            for (int index = 0; index < copyArray.Length; index++)
             {
-                array2[index] = number[index];
-                showRichTextBox.Text = Convert.ToString(array2[index]);
+                copyArray[index] = number[index];
+               
 
             }
-
             string message = " ";
 
-            message = message + Show();
+            for (int index = 0; index < copyArray.Length; index++)
+            {
+                if (copyArray[index] != 0)
+                    message = message + "Element at index  [" + index + "]  =  " + copyArray[index].ToString() + "\n";
+
+            }
 
             showRichTextBox.Text = message;
         }
 
         private void duplicateButton_Click(object sender, EventArgs e)
         {
-            int duplicate = number[0];
+            
             int count = 0;
 
-            for (int index =0; index < number.Length; index ++)
+            for (int indexI = 0; indexI < number.Length; indexI ++)
             {
-                for (int indexJ =0; indexJ <= index; indexJ++)
+                for (int indexJ = indexI + 1; indexJ < number.Length; indexJ++)
                 {
-                    if (number[indexJ] == duplicate )
+                    if (number[indexI] == number[indexJ])
                     {
                         count++;
                     }
-
+                        
                 }
+                
             }
             showRichTextBox.Text = Convert.ToString(count);
         }
