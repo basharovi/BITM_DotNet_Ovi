@@ -19,50 +19,55 @@ namespace BookShop
 
         int index = 1;
         int price;
-
+        string[] customerName = new string[100];
+        string[] phoneNo = new string[100];
+        string[] address = new string[100];
+        string[] order = new string[100];
+        string[] quantity = new string[100];
+        string[] bill = new string[100];
 
 
 
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            string[] customerName = new string[100];
-            string[] phoneNo = new string[100];
-            string[] address = new string[100];
-            string[] order = new string[100];
-            string[] quantity = new string[100];
-            string[] bill = new string[100];
 
-
-
-            customerName[index] = customerNameTextBox.Text;
-            phoneNo[index] = phoneNumberTextBox.Text;
-            address[index] = addressTextBox.Text;
-            order[index] = orderComboBox.Text;
-            quantity[index] = quantitiyTextBox.Text;
-
-
-            if (order[index].Equals("Math"))
+            try
             {
-                price = 120;
+                customerName[index] = customerNameTextBox.Text;
+                phoneNo[index] = phoneNumberTextBox.Text;
+                address[index] = addressTextBox.Text;
+                order[index] = orderComboBox.Text;
+                quantity[index] = quantitiyTextBox.Text;
 
+
+                if (order[index].Equals("Math"))
+                {
+                    price = 120;
+
+                }
+                else if (order[index].Equals("English"))
+                {
+                    price = 100;
+
+                }
+                else if (order[index].Equals("Bangla"))
+                {
+                    price = 90;
+
+                }
+                else if (order[index].Equals("Art"))
+                {
+                    price = 80;
+
+                }
+                bill[index] = (Convert.ToInt32(quantity[index]) * price).ToString();
             }
-            else if (order[index].Equals("English"))
+                catch (Exception exp)
             {
-                price = 100;
-
+                MessageBox.Show(exp.Message);
             }
-            else if (order[index].Equals("Bangla"))
-            {
-                price = 90;
 
-            }
-            else if (order[index].Equals("Art"))
-            {
-                price = 80;
-
-            }
-            bill[index] = (Convert.ToInt32(quantity[index]) * price).ToString();
 
             richTextBox.SelectedText = ("\n\t     Customer No. [" + index + "] Information \n\t_______________________________\n\n");
             richTextBox.SelectedText = (" Name              :   " + customerName[index] + "\n");

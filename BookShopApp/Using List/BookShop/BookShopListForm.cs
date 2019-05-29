@@ -28,12 +28,6 @@ namespace BookShop
         }
 
         
-        
-        
-
-
-
-
         private void SaveButton_Click(object sender, EventArgs e)
         {
             
@@ -41,6 +35,11 @@ namespace BookShop
             phoneNumbers.Add(phoneNumberTextBox.Text);
             address.Add(addressTextBox.Text);
             orders.Add(orderComboBox.Text);
+            if (String.IsNullOrEmpty(quantitiyTextBox.Text))
+            {
+                MessageBox.Show("Quantity box can not be Empty");
+                return;
+            }
             quantities.Add(quantitiyTextBox.Text);
             
             if (orders[index].Equals("Math-120"))
